@@ -16,11 +16,11 @@ Welcome to **Economics 607: Econometrics III** (Spring 2022) at the University o
 
 ## Schedule
 
-**Lecture** Monday and Wednesday 10:00am–11:20am, 410 PLC
+**Lecture** Monday and Wednesday 10:00am–11:20am, [410 PLC](https://map.uoregon.edu/8d5faadb9)
 
 **Lab** Friday 12:00pm–12:50pm, 202 Chapman Hall
 
-**Office hours** ([see Canvas for Zoom links](https://canvas.uoregon.edu/courses/176672))
+**Office hours** ([see Canvas for Zoom links](https://canvas.uoregon.edu/courses/200807))
 
 **[Ed Rubin](https://edrub.in)**: TBA
 
@@ -67,28 +67,28 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 
 *Another note on the notes:* I create the slides with [`xaringan`](https://github.com/yihui/xaringan/wiki) in [R](cran.r-project.org). Thanks to [Grant McDermott](grantmcdermott.com/) for encouraging me to make this switch.
 
-**[Lecture 01: Research + R + You = 💖](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/01-research-r/01-research-r.html)**
+**[Lecture 01: Research + R + You = 💖](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/01-research-r/01-research-r.html)**
 
 1. An introduction to empirical research via applied econometrics.
 1. R: Light introduction—objects, functions, and help.
 
-<!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/01-research-r/01-research-r.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/01-research-r/01-research-r.pdf) |
-[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/01-research-r/01-research-r-nopause.pdf) |
-[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/01-research-r/01-research-r.Rmd)
- -->
+**Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/01-research-r/01-research-r.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/01-research-r/01-research-r.pdf) |
+[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/01-research-r/01-research-r-nopause.pdf) |
+[.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/01-research-r/01-research-r.Rmd)
+
  **Readings:** MHE preface + MHE chapter 1
 
-**[Lecture 02: The Experimental Ideal](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/02-the-ideal/02-the-ideal.html)**
+**[Lecture 02: The Experimental Ideal](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/02-the-ideal/02-the-ideal.html)**
 
 1. Neyman potential outcomes framework (Rubin causal model)
 1. Selection bias and experimental variation in treatment
 
-<!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/02-the-ideal/02-the-ideal.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/02-the-ideal/02-the-ideal.pdf) |
-[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/02-the-ideal/02-the-ideal-nopause.pdf) | 
-[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/02-the-ideal/02-the-ideal.Rmd)
- -->
+**Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/02-the-ideal/02-the-ideal.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/02-the-ideal/02-the-ideal.pdf) |
+[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/02-the-ideal/02-the-ideal-nopause.pdf) | 
+[.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/02-the-ideal/02-the-ideal.Rmd)
+
  **Readings:** MHE chapter 2
 
 **[Lecture 03: Why Regression?](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/03-why-regression/03-why-regression.html)**
