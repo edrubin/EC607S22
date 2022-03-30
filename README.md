@@ -22,9 +22,9 @@ Welcome to **Economics 607: Econometrics III** (Spring 2022) at the University o
 
 **Office hours** ([see Canvas for Zoom links](https://canvas.uoregon.edu/courses/200807))
 
-**[Ed Rubin](https://edrub.in)**: TBA
+**[Ed Rubin](https://edrub.in)**: Wednesdays, 4p–5p, Zoom
 
-**[Kyutaro Matsuzawa](https://economics.uoregon.edu/profile/kyutarom/)**: TBA
+**[Kyutaro Matsuzawa](https://economics.uoregon.edu/profile/kyutarom/)**: Thursdays, 4p–5p, Zoom
 
 ## Books
 
@@ -61,7 +61,7 @@ We will mainly use two books.
 
 ## Lecture slides
 
-*Note:* The linked slides (below) are `.html` files that will only work properly if you are connected to the internet. If you're going off grid (camping + metrics?), grab the PDFs. You'll miss out on gifs and interactive plots, but the equations will actually show up. I've removed the within-slide (incremental) pauses in the *(no pauses)* PDF slides.
+*Note:* The linked slides (below) are `.html` files that will only work properly if you are connected to the internet. If you're going off grid (camping + metrics?), grab the PDFs. You'll miss out on gifs and interactive plots, but the equations will actually show up. 
 
 The content of the lectures mainly follows *MHE* and [Michael Anderson](https://are.berkeley.edu/~mlanderson/ARE_Website/Home.html)—with additional inspiration from [Max Auffhammer](https://www.auffhammer.com) and many other sources.
 
@@ -74,7 +74,6 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 
 **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/01-research-r/01-research-r.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/01-research-r/01-research-r.pdf) |
-[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/01-research-r/01-research-r-nopause.pdf) |
 [.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/01-research-r/01-research-r.Rmd)
 
  **Readings:** MHE preface + MHE chapter 1
@@ -86,7 +85,6 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 
 **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/02-the-ideal/02-the-ideal.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/02-the-ideal/02-the-ideal.pdf) |
-[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/02-the-ideal/02-the-ideal-nopause.pdf) | 
 [.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/02-the-ideal/02-the-ideal.Rmd)
 
  **Readings:** MHE chapter 2
@@ -311,7 +309,7 @@ Kyutaro Matsuzawa will walk you through R and applications of the course content
 
 Problem sets combining econometric theory and R.
 
-**Problem set 1:** Very soon!
+[**Problem set 1**](problem-sets/001)
 
 ## Project
 
