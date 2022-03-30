@@ -37,7 +37,7 @@ This problem set has three purposes:
 
 ## Questions
 
-**01** Load whichever packages you think you'll want—and the dataset [`data-001.csv`](problem-sets/001/data-001.csv).
+**01** Load whichever packages you think you'll want—and the dataset [`data-001.csv`](https://raw.githack.com/edrubin/EC607S22/master/problem-sets/001/data-001.csv).
 
 **02** Using the function `lm()`: Regress counties' median income for Black household in 2010 (`income_black_2010`) on an intercept, the county's 1860 enslaved population (`pop_enslaved_1860`), the county's total population in 1860 (`pop_total_1860`), and the county's total population in 2010 (`pop_total_2010`). (You should have one outcome variable, and intercept, and three explanatory variables.)
 
