@@ -89,17 +89,16 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 
  **Readings:** MHE chapter 2
 
-**[Lecture 03: Why Regression?](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/03-why-regression/03-why-regression.html)**
+**[Lecture 03: Why Regression?](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/03-why-regression/03-why-regression.html)**
 
 1. What's the big deal about least-squares (population) regression?
 2. What does the CEF tell us?
 3. How does least-squares regression relate to the CEF?
 
-<!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/03-why-regression/03-why-regression.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/03-why-regression/03-why-regression.pdf) |
-[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/03-why-regression/03-why-regression-nopause.pdf) | 
-[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/03-why-regression/03-why-regression.Rmd)
- -->
+**Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/03-why-regression/03-why-regression.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/03-why-regression/03-why-regression.pdf) |
+[.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/03-why-regression/03-why-regression.Rmd)
+
  **Readings:** MHE chapter 3.1
 
 **[Lecture 04: Inference and Simulation](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference.html)**
