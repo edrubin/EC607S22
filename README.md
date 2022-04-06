@@ -101,18 +101,17 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 
  **Readings:** MHE chapter 3.1
 
-**[Lecture 04: Inference and Simulation](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference.html)**
+**[Lecture 04: Inference and Simulation](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/04-inference/04-inference.html)**
 
 1. How do we move from populations to samples?
 2. What matters for drawing basic statistical inferences about the population?
 3. How can we learn about inference from simulation?
 4. How do we run (parallelized) simulations in R?
 
-<!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference.html) |
+**Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference.pdf) |
-[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference-nopause.pdf) | 
 [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference.Rmd)
- -->
+
  **Readings:** MHE chapter 3
 
 **[Lecture 05: Regression Stuff](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/05-regression-stuff/05-regression-stuff.html)**
@@ -309,6 +308,7 @@ Kyutaro Matsuzawa will walk you through R and applications of the course content
 Problem sets combining econometric theory and R.
 
 [**Problem set 1**](problem-sets/001)
+<br>**Due:** 07 April 2022 (submit on Canvas)
 
 ## Project
 
@@ -318,9 +318,9 @@ Step 1: **Research question (causal relationship of interest) and motivation.**
 
 - *Assignment:* Pitch a project—including the causal question of interest, the motivation.
 - This project should be something you could turn into a legitimate research project.
-- Length: Between 2 sentences and 2 paragraphs (think *abstract*—read abstracts if necessary).
+- Length: 100–200 [words](https://grammarly.com)
 
-**Due:** TBA
+**Due:** 14 April 2022
 
 Step 2: [**Project proposal**](project/step-02.md)
 

@@ -147,6 +147,8 @@ tidy_table <- function(x, terms, highlight_row = 1, highlight_color = "black", h
     row_spec(1:nrow(tidy(x)), background = "white") %>%
     row_spec(highlight_row, bold = highlight_bold, color = highlight_color)
 }
+# A few extras
+xaringanExtra::use_xaringan_extra(c("tile_view", "fit_screen"))
 ```
 
 # Prologue
