@@ -28,17 +28,17 @@ p_load(
   estimatr, here, magrittr
 )
 # Define pink color
-red_pink <- "#e64173"
-turquoise <- "#20B2AA"
-orange <- "#FFA500"
-red <- "#fb6107"
-blue <- "#3b3b9a"
-green <- "#8bb174"
-grey_light <- "grey70"
-grey_mid <- "grey50"
-grey_dark <- "grey20"
-purple <- "#6A5ACD"
-slate <- "#314f4f"
+red_pink = "#e64173"
+turquoise = "#20B2AA"
+orange = "#FFA500"
+red = "#fb6107"
+blue = "#3b3b9a"
+green = "#8bb174"
+grey_light = "grey70"
+grey_mid = "grey50"
+grey_dark = "grey20"
+purple = "#6A5ACD"
+slate = "#314f4f"
 # Dark slate grey: #314f4f
 # Knitr options
 opts_chunk$set(
@@ -56,7 +56,7 @@ options(device = function(file, width, height) {
 options(crayon.enabled = F)
 options(knitr.table.format = "html")
 # A blank theme for ggplot
-theme_empty <- theme_bw() + theme(
+theme_empty = theme_bw() + theme(
   line = element_blank(),
   rect = element_blank(),
   strip.text = element_blank(),
@@ -66,7 +66,7 @@ theme_empty <- theme_bw() + theme(
   plot.margin = structure(c(0, 0, -0.5, -1), unit = "lines", valid.unit = 3L, class = "unit"),
   legend.position = "none"
 )
-theme_simple <- theme_bw() + theme(
+theme_simple = theme_bw() + theme(
   line = element_blank(),
   panel.grid = element_blank(),
   rect = element_blank(),
@@ -79,7 +79,7 @@ theme_simple <- theme_bw() + theme(
   # plot.margin = structure(c(0, 0, -1, -1), unit = "lines", valid.unit = 3L, class = "unit"),
   legend.position = "none"
 )
-theme_axes_math <- theme_void() + theme(
+theme_axes_math = theme_void() + theme(
   text = element_text(family = "MathJax_Math"),
   axis.title = element_text(size = 22),
   axis.title.x = element_text(hjust = .95, margin = margin(0.15, 0, 0, 0, unit = "lines")),
@@ -92,7 +92,7 @@ theme_axes_math <- theme_void() + theme(
   plot.margin = structure(c(1, 0, 1, 0), unit = "lines", valid.unit = 3L, class = "unit"),
   legend.position = "none"
 )
-theme_axes_serif <- theme_void() + theme(
+theme_axes_serif = theme_void() + theme(
   text = element_text(family = "MathJax_Main"),
   axis.title = element_text(size = 22),
   axis.title.x = element_text(hjust = .95, margin = margin(0.15, 0, 0, 0, unit = "lines")),
@@ -105,7 +105,7 @@ theme_axes_serif <- theme_void() + theme(
   plot.margin = structure(c(1, 0, 1, 0), unit = "lines", valid.unit = 3L, class = "unit"),
   legend.position = "none"
 )
-theme_axes <- theme_void() + theme(
+theme_axes = theme_void() + theme(
   text = element_text(family = "Fira Sans Book"),
   axis.title = element_text(size = 18),
   axis.title.x = element_text(hjust = .95, margin = margin(0.15, 0, 0, 0, unit = "lines")),
@@ -120,18 +120,18 @@ theme_axes <- theme_void() + theme(
 )
 theme_set(theme_gray(base_size = 20))
 # Column names for regression results
-reg_columns <- c("Term", "Est.", "S.E.", "t stat.", "p-Value")
+reg_columns = c("Term", "Est.", "S.E.", "t stat.", "p-Value")
 # Function for formatting p values
-format_pvi <- function(pv) {
+format_pvi = function(pv) {
   return(ifelse(
     pv < 0.0001,
     "<0.0001",
     round(pv, 4) %>% format(scientific = F)
   ))
 }
-format_pv <- function(pvs) lapply(X = pvs, FUN = format_pvi) %>% unlist()
+format_pv = function(pvs) lapply(X = pvs, FUN = format_pvi) %>% unlist()
 # Tidy regression results table
-tidy_table <- function(x, terms, highlight_row = 1, highlight_color = "black", highlight_bold = T, digits = c(NA, 3, 3, 2, 5), title = NULL) {
+tidy_table = function(x, terms, highlight_row = 1, highlight_color = "black", highlight_bold = T, digits = c(NA, 3, 3, 2, 5), title = NULL) {
   x %>%
     tidy() %>%
     select(1:5) %>%
@@ -423,9 +423,9 @@ set.seed(12345)
 library(pacman)
 p_load(dplyr)
 # Choose a size
-n <- 1000
+n = 1000
 # Generate data
-dgp_df <- tibble(
+dgp_df = tibble(
   ε = rnorm(n, sd = 15),
   x = runif(n, min = 0, max = 10),
   y = 1 + exp(0.5 * x) + ε
@@ -493,9 +493,9 @@ name: iter
 To make iterating easier, let's wrap our DGP in a function.
 
 ```{r, sim_fun}
-fun_iter <- function(iter, n = 30) {
+fun_iter = function(iter, n = 30) {
   # Generate data
-  iter_df <- tibble(
+  iter_df = tibble(
     ε = rnorm(n, sd = 15),
     x = runif(n, min = 0, max = 10),
     y = 1 + exp(0.5 * x) + ε
@@ -526,16 +526,16 @@ lm_robust(y ~ x, data = dgp_df, se_type = "HC2") %>% tidy() %>% select(1:5)
 Now add these estimators to our iteration function...
 
 ```{r, sim_fun2}
-fun_iter <- function(iter, n = 30) {
+fun_iter = function(iter, n = 30) {
   # Generate data
-  iter_df <- tibble(
+  iter_df = tibble(
     ε = rnorm(n, sd = 15),
     x = runif(n, min = 0, max = 10),
     y = 1 + exp(0.5 * x) + ε
   )
   # Estimate models
-  lm1 <- lm_robust(y ~ x, data = iter_df, se_type = "classical")
-  lm2 <- lm_robust(y ~ x, data = iter_df, se_type = "HC2")
+  lm1 = lm_robust(y ~ x, data = iter_df, se_type = "classical")
+  lm2 = lm_robust(y ~ x, data = iter_df, se_type = "HC2")
   # Stack and return results
   bind_rows(tidy(lm1), tidy(lm2)) %>%
     select(1:5) %>% filter(term == "x") %>%
@@ -574,7 +574,7 @@ p_load(purrr)
 # Set seed
 set.seed(12345)
 # Run 10,000 iterations
-sim_list <- map(1:1e4, fun_iter)
+sim_list = map(1:1e4, fun_iter)
 ```
 ]
 --
@@ -589,7 +589,7 @@ set.seed(123)
 # Tell R to parallelize
 plan(multiprocess)
 # Run 10,000 iterations
-sim_list <- future_map(
+sim_list = future_map(
   1:1e4, fun_iter,
   .options = future_options(seed = T)
 )
@@ -609,7 +609,7 @@ So `sim_list` is going to be a `list` of `data.frame` objects. We can bind them 
 
 ```{r, sim_bind}
 # Bind list together
-sim_df <- bind_rows(sim_list)
+sim_df = bind_rows(sim_list)
 ```
 
 --
@@ -688,16 +688,16 @@ In other words,
 Updating the function...
 
 ```{r, sim_null}
-flex_iter <- function(iter, γ = 0, δ = 1, n = 30) {
+flex_iter = function(iter, γ = 0, δ = 1, n = 30) {
   # Generate data
-  iter_df <- tibble(
+  iter_df = tibble(
     x = runif(n, min = 0, max = 10),
     ε = rnorm(n, sd = 15 * x^δ),
     y = 1 + exp(γ * x) + ε
   )
   # Estimate models
-  lm1 <- lm_robust(y ~ x, data = iter_df, se_type = "classical")
-  lm2 <- lm_robust(y ~ x, data = iter_df, se_type = "HC2")
+  lm1 = lm_robust(y ~ x, data = iter_df, se_type = "classical")
+  lm2 = lm_robust(y ~ x, data = iter_df, se_type = "HC2")
   # Stack and return results
   bind_rows(tidy(lm1), tidy(lm2)) %>%
     select(1:5) %>% filter(term == "x") %>%
@@ -718,7 +718,7 @@ set.seed(123)
 # Tell R to parallelize
 plan(multiprocess)
 # Run 10,000 iterations
-null_df <- future_map(
+null_df = future_map(
   1:1e4, flex_iter,
   # Enforce the null hypothesis
   γ = 0,

@@ -108,35 +108,33 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 3. How can we learn about inference from simulation?
 4. How do we run (parallelized) simulations in R?
 
-**Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference.pdf) |
-[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/04-inference/04-inference.Rmd)
+**Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/04-inference/04-inference.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/04-inference/04-inference.pdf) |
+[.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/04-inference/04-inference.Rmd)
 
  **Readings:** MHE chapter 3
 
-**[Lecture 05: Regression Stuff](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/05-regression-stuff/05-regression-stuff.html)**
+**[Lecture 05: Regression Stuff](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/05-regression-stuff/05-regression-stuff.html)**
 
 1. Saturated models
 1. When is regression causal?
 1. The conditional-independence assumption
 
-<!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/05-regression-stuff/05-regression-stuff.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/05-regression-stuff/05-regression-stuff.pdf) |
-[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/05-regression-stuff/05-regression-stuff-nopause.pdf) | 
-[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/05-regression-stuff/05-regression-stuff.Rmd)
- -->
+**Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/05-regression-stuff/05-regression-stuff.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/05-regression-stuff/05-regression-stuff.pdf) |
+[.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/05-regression-stuff/05-regression-stuff.Rmd)
+
  **Readings:** Still MHE chapter 3
 
-**[Lecture 06: Controls](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/06-controls/06-controls.html)**
+**[Lecture 06: Controls](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/06-controls/06-controls.html)**
 
 1. Omitted-variable bias
 1. Good and bad controls
 
-<!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/06-controls/06-controls.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/06-controls/06-controls.pdf) |
-[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/06-controls/06-controls-nopause.pdf) | 
-[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/06-controls/06-controls.Rmd)
- -->
+**Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/06-controls/06-controls.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/06-controls/06-controls.pdf) |
+[.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/06-controls/06-controls.Rmd)
+
  **Readings:** Still MHE chapter 3
 
 **[Lecture 07: DAGs](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags.html)**
@@ -150,7 +148,7 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
  [.html (with scribble)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags-scribble.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags.pdf) |
 [.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags-nopause.pdf) | 
- -->[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags.Rmd)
+ [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags.Rmd)-->
 <br>**Readings:** Brady Neal's book, chapters 1–3 (especially 2–3)
 
 *Extras:* [dagitty](http://dagitty.net) and [ggdag](https://ggdag.malco.io/index.html)
@@ -163,8 +161,7 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 <!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching.html) |
 [.html (with scribble)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching-scribble.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching.pdf) |
-[.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching-nopause.pdf) | 
- -->[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching.Rmd)
+ [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching.Rmd)-->
 <br>**Readings:** MHE chapter 3 + C&T section 25.4
 
 **[Lecture 09: Instrument Variables](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv.html)**
@@ -178,7 +175,7 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 [.html (with scribble)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv-scribble.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv.pdf) |
 [.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv-nopause.pdf) | 
- -->[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv.Rmd)
+ [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv.Rmd)-->
 <br>**Readings:** MHE chapter 4 + C&T sections 4.8–4.9
 
 **[Lecture 10: Regression Discontinuity](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.html)**
@@ -191,7 +188,7 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 [.html (with scribble)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd-scribble.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.pdf) |
 [.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd-nopause.pdf) | 
- -->[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.Rmd)
+ [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.Rmd)-->
 <br>**Readings:** MHE chapter 6 + C&T sections 25.6
 
 **[Lecture 11: Inference: Clustering](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.html)**

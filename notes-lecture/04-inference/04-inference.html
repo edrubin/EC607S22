@@ -4,7 +4,6 @@
     <title>Inference and Simulation</title>
     <meta charset="utf-8" />
     <meta name="author" content="Edward Rubin" />
-    <script src="04-inference_files/header-attrs-2.11/header-attrs.js"></script>
     <link href="04-inference_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="04-inference_files/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="04-inference_files/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -296,9 +295,9 @@ where `\(\text{X}_{i}\sim\mathop{\text{Uniform}}(0, 10)\)` and `\(\varepsilon_i\
 library(pacman)
 p_load(dplyr)
 # Choose a size
-n &lt;- 1000
+n = 1000
 # Generate data
-dgp_df &lt;- tibble(
+dgp_df = tibble(
   ε = rnorm(n, sd = 15),
   x = runif(n, min = 0, max = 10),
   y = 1 + exp(0.5 * x) + ε
@@ -362,9 +361,9 @@ To make iterating easier, let's wrap our DGP in a function.
 
 
 ```r
-fun_iter &lt;- function(iter, n = 30) {
+fun_iter = function(iter, n = 30) {
   # Generate data
-  iter_df &lt;- tibble(
+  iter_df = tibble(
     ε = rnorm(n, sd = 15),
     x = runif(n, min = 0, max = 10),
     y = 1 + exp(0.5 * x) + ε
@@ -412,16 +411,16 @@ Now add these estimators to our iteration function...
 
 
 ```r
-fun_iter &lt;- function(iter, n = 30) {
+fun_iter = function(iter, n = 30) {
   # Generate data
-  iter_df &lt;- tibble(
+  iter_df = tibble(
     ε = rnorm(n, sd = 15),
     x = runif(n, min = 0, max = 10),
     y = 1 + exp(0.5 * x) + ε
   )
   # Estimate models
-  lm1 &lt;- lm_robust(y ~ x, data = iter_df, se_type = "classical")
-  lm2 &lt;- lm_robust(y ~ x, data = iter_df, se_type = "HC2")
+  lm1 = lm_robust(y ~ x, data = iter_df, se_type = "classical")
+  lm2 = lm_robust(y ~ x, data = iter_df, se_type = "HC2")
   # Stack and return results
   bind_rows(tidy(lm1), tidy(lm2)) %&gt;%
     select(1:5) %&gt;% filter(term == "x") %&gt;%
@@ -461,7 +460,7 @@ p_load(purrr)
 # Set seed
 set.seed(12345)
 # Run 10,000 iterations
-sim_list &lt;- map(1:1e4, fun_iter)
+sim_list = map(1:1e4, fun_iter)
 ```
 ]
 --
@@ -477,7 +476,7 @@ set.seed(123)
 # Tell R to parallelize
 plan(multiprocess)
 # Run 10,000 iterations
-sim_list &lt;- future_map(
+sim_list = future_map(
   1:1e4, fun_iter,
   .options = future_options(seed = T)
 )
@@ -498,7 +497,7 @@ So `sim_list` is going to be a `list` of `data.frame` objects. We can bind them 
 
 ```r
 # Bind list together
-sim_df &lt;- bind_rows(sim_list)
+sim_df = bind_rows(sim_list)
 ```
 
 --
@@ -555,16 +554,16 @@ Updating the function...
 
 
 ```r
-flex_iter &lt;- function(iter, γ = 0, δ = 1, n = 30) {
+flex_iter = function(iter, γ = 0, δ = 1, n = 30) {
   # Generate data
-  iter_df &lt;- tibble(
+  iter_df = tibble(
     x = runif(n, min = 0, max = 10),
     ε = rnorm(n, sd = 15 * x^δ),
     y = 1 + exp(γ * x) + ε
   )
   # Estimate models
-  lm1 &lt;- lm_robust(y ~ x, data = iter_df, se_type = "classical")
-  lm2 &lt;- lm_robust(y ~ x, data = iter_df, se_type = "HC2")
+  lm1 = lm_robust(y ~ x, data = iter_df, se_type = "classical")
+  lm2 = lm_robust(y ~ x, data = iter_df, se_type = "HC2")
   # Stack and return results
   bind_rows(tidy(lm1), tidy(lm2)) %&gt;%
     select(1:5) %&gt;% filter(term == "x") %&gt;%
@@ -586,7 +585,7 @@ set.seed(123)
 # Tell R to parallelize
 plan(multiprocess)
 # Run 10,000 iterations
-null_df &lt;- future_map(
+null_df = future_map(
   1:1e4, flex_iter,
   # Enforce the null hypothesis
   γ = 0,
@@ -651,8 +650,6 @@ layout: false
 
 ---
 exclude: true
-
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
