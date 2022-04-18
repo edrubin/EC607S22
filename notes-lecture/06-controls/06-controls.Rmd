@@ -534,7 +534,7 @@ $$
 
 --
 
-Becuase we've assumed $\text{C}_i$ is randomly assigned, differences in means yield causal estimates, _i.e._,
+Because we've assumed $\text{C}_i$ is randomly assigned, differences in means yield causal estimates, _i.e._,
 
 $$
 \begin{align}
