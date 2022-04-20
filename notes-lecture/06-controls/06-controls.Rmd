@@ -176,7 +176,8 @@ The conditional independence assumption: $\left\{ \text{Y}_{0i},\, \text{Y}_{1i}
 
 ## Upcoming
 
-- Topics: Matching estimators
+- DAGS
+- Matching estimators
 
 ---
 layout: true
@@ -547,7 +548,7 @@ $$
 ---
 ## Formal-ish derivation, continued
 
-Let's see what happens when we throw in some controls—_e.g._, focusing on the the wage-effect of college graduation for white-collar jobs.
+Let's see what happens when we throw in some controls—_e.g._, focusing on the wage-effect of college graduation for white-collar jobs.
 
 --
 
