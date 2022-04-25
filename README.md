@@ -137,29 +137,28 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 
  **Readings:** Still MHE chapter 3
 
-**[Lecture 07: DAGs](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags.html)**
+**[Lecture 07: DAGs](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/07-dags/07-dags.html)**
 
 1. Defining graphs 
 1. Underlying theory for DAGs
 1. Building blocks
 1. Examples
 
- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags.html) |
- [.html (with scribble)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags-scribble.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags.pdf) |
- [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/07-dags/07-dags.Rmd)
+ **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/07-dags/07-dags.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/07-dags/07-dags.pdf) |
+ [.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/07-dags/07-dags.Rmd)
 <br>**Readings:** Brady Neal's book, chapters 1–3 (especially 2–3)
 
 *Extras:* [dagitty](http://dagitty.net) and [ggdag](https://ggdag.malco.io/index.html)
 
-**[Lecture 08: Matching](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching.html)**
+**[Lecture 08: Matching](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/08-matching/08-matching.html)**
 
 1. Matching estimators: Nearest neighbor and kernel
 1. Propensity-score methods: Regression control, treatment-effect heterogeneity, blocking, weighting, *doubly robust*
 
- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching.pdf) |
- [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/08-matching/08-matching.Rmd)
+ **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/08-matching/08-matching.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/08-matching/08-matching.pdf) |
+ [.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/08-matching/08-matching.Rmd)
 <br>**Readings:** MHE chapter 3 + C&T section 25.4
 
 **[Lecture 09: Instrument Variables](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv.html)**
