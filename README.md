@@ -172,7 +172,8 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv.pdf) |
 [.pdf (no pauses)](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv-nopause.pdf) | 
  [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/09-iv/09-iv.Rmd)
-<br>-->**Readings:** MHE chapter 4 + C&T sections 4.8–4.9
+<br>-->
+**Readings:** MHE chapter 4 + C&T sections 4.8–4.9
 
 **[Lecture 10: Regression Discontinuity](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.html)**
 
@@ -183,7 +184,8 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 <!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.pdf) |
  [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.Rmd)
-<br>-->**Readings:** MHE chapter 6 + C&T sections 25.6
+<br>-->
+**Readings:** MHE chapter 6 + C&T sections 25.6
 
 **[Lecture 11: Inference: Clustering](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.html)**
 
@@ -194,7 +196,8 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 <!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.pdf) |
 [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.Rmd)
--->**Readings:** MHE chapter 8
+-->
+**Readings:** MHE chapter 8
 
 **[Lecture 12: Inference: Resampling and Randomization](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/12-randomization/12-randomization.html)**
 
@@ -206,7 +209,8 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 <!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/12-randomization/12-randomization.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/12-randomization/12-randomization.pdf) |
 [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/12-randomization/12-randomization.Rmd)
--->**Readings:** MHE chapter 6 + C&T sections 25.6
+-->
+**Readings:** MHE chapter 6 + C&T sections 25.6
 
 [**Lecture 13: Machine learning (in one lecture)**](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/13-ml/13-ml.html)
 
@@ -221,7 +225,8 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 <!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/13-ml/13-ml.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/13-ml/13-ml.pdf) | 
 [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/13-ml/13-ml.Rmd)
--->**Readings:** [Introduction to statistical learning](http://faculty.marshall.usc.edu/gareth-james/ISL/)
+-->
+**Readings:** [Introduction to statistical learning](http://faculty.marshall.usc.edu/gareth-james/ISL/)
 
 ## Lab slides
 
