@@ -211,6 +211,7 @@ $$
 .note[The idea:] Estimate a treatment effect only using observations with (nearly?) identical values of $\text{X}_{i}$.
 --
  The CIA buys us causality within these groups.
+
 ---
 name: goals
 ## Goals
@@ -222,13 +223,14 @@ Let's return to .b[the fundamental problem of causal inference] for a moment.
 
 --
 
-Most empirical strategies boil to strategies to estimate $\text{Y}_{0i}$ for treated individuals—the unobservable counterfactual for the treatment group.
+Most (all?) empirical strategies boil to estimating $\text{Y}_{0i}$ for treated individuals—the unobservable counterfactual for the treatment group.
 
 --
 
 Matching is no different.
 
 We match untreated observations to treated observations using $\text{X}_{i}$, _i.e._, calculate a $\widehat{\text{Y}_{0i}}$ for each $\text{Y}_{1i}$, based upon "matched" untreated individuals.
+
 ---
 ## More formally
 
@@ -236,7 +238,7 @@ We want to construct a counterfactual for each individual with $\text{D}_{i}=1$.
 
 --
 
-The counterfactual for $i$ should only use individuals that match $\text{X}_{i}$.
+.note[CIA:] The counterfactual for $i$ should only use individuals that match $\text{X}_{i}$.
 
 --
 
@@ -273,7 +275,7 @@ $$
 
 --
 
-∴ a generic matching estimator for the treatment effect on the treated is
+∴ a generic matching estimator for the .pink[treatment effect on the treated] is
 $$
 \begin{align}
   \hat{\tau}_M = \dfrac{1}{N_T} \sum_{i \in \left( \text{D}=1 \right)} \left( \text{Y}_{1i} - \widehat{\text{Y}_{0i}} \right) = \dfrac{1}{N_T} \sum_{i \in \left( \text{D}=1 \right)} \left( \text{Y}_{1i} - \sum_{j\in \left( D=0 \right)} w_i(j) \text{Y}_{j} \right)
@@ -748,7 +750,8 @@ However, overlap may fail if the dimensions of $X$ are large and $N$ is finite.
 
 --
 
-.hi[Propensity scores provide a solution] to this mess.
+.hi[Propensity scores] attempt to offer a solution to this mess.
+
 ---
 name: magic
 ## The magic
