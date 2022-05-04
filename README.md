@@ -179,11 +179,10 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 1. Fuzzy regression discontinuities
 1. Graphical analyses
 
-<!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.html) |
+ **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.html) |
 [.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.pdf) |
  [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.Rmd)
-<br>-->
-**Readings:** MHE chapter 6 + C&T sections 25.6
+<br>**Readings:** MHE chapter 6 + C&T sections 25.6
 
 **[Lecture 11: Inference: Clustering](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.html)**
 
