@@ -173,27 +173,27 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
  [.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/09-iv/09-iv.Rmd)
 <br>**Readings:** MHE chapter 4 + C&T sections 4.8–4.9
 
-**[Lecture 10: Regression Discontinuity](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.html)**
+**[Lecture 10: Regression Discontinuity](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/10-rd/10-rd.html)**
 
 1. Sharp regression discontinuities
 1. Fuzzy regression discontinuities
 1. Graphical analyses
 
- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.pdf) |
- [.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/10-rd/10-rd.Rmd)
+ **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/10-rd/10-rd.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/10-rd/10-rd.pdf) |
+ [.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/10-rd/10-rd.Rmd)
 <br>**Readings:** MHE chapter 6 + C&T sections 25.6
 
-**[Lecture 11: Inference: Clustering](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.html)**
+**[Lecture 11: Inference: Clustering](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/11-clustering/11-clustering.html)**
 
 1. General inference
 1. Moulton
 1. Cluster-robust standard errors
 
-<!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.pdf) |
-[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/11-clustering/11-clustering.Rmd)
--->
+ **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/11-clustering/11-clustering.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/11-clustering/11-clustering.pdf) |
+[.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/11-clustering/11-clustering.Rmd)
+
 **Readings:** MHE chapter 8
 
 **[Lecture 12: Inference: Resampling and Randomization](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/12-randomization/12-randomization.html)**
@@ -311,7 +311,7 @@ Step 1: **Research question (causal relationship of interest) and motivation.**
 
 Step 2: [**Project proposal**](project/step-02.md)
 
-**Due:** TBA
+**Due:** 25 May 2022
 
 ## Practice problems
 
