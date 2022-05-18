@@ -28,17 +28,17 @@ p_load(
   here, magrittr
 )
 # Define pink color
-red_pink <- "#e64173"
-turquoise <- "#20B2AA"
-orange <- "#FFA500"
-red <- "#fb6107"
-blue <- "#3b3b9a"
-green <- "#8bb174"
-grey_light <- "grey70"
-grey_mid <- "grey50"
-grey_dark <- "grey20"
-purple <- "#6A5ACD"
-slate <- "#314f4f"
+red_pink = "#e64173"
+turquoise = "#20B2AA"
+orange = "#FFA500"
+red = "#fb6107"
+blue = "#3b3b9a"
+green = "#8bb174"
+grey_light = "grey70"
+grey_mid = "grey50"
+grey_dark = "grey20"
+purple = "#6A5ACD"
+slate = "#314f4f"
 # Dark slate grey: #314f4f
 # Knitr options
 opts_chunk$set(
@@ -301,6 +301,78 @@ The .attn[Moulton factor] tells us by what factor standard errors will be wrong 
  What if you duplicated your dataset?
 --
 <br>.qa[Q] What happens as $n$ increases?
+
+---
+exclude: true
+
+```{r, dup-data, echo = F, cache = TRUE}
+# Load data
+test_df = Ecdat::Caschool %>% select(
+  test_score = testscr, ratio = str, income = avginc, enrollment = enrltot
+) %>% as_tibble()
+# And an id
+test_df %<>% mutate(id = 1:nrow(test_df))
+# Stack the dataset a bunch of times
+dup_df = lapply(X = 1:20, FUN = function(x) mutate(test_df, dup = x)) %>% bind_rows()
+# Now run a regression
+dup_est = lapply(
+  X = 1:20,
+  FUN = function(x) feols(test_score ~ ratio + income, data = dup_df %>% filter(dup <= x))
+)
+# Grab standard errors
+dup_se = lapply(
+  X = seq_along(dup_est),
+  FUN = function(x) {
+    data.frame(
+      dups = x - 1,
+      se_iid = dup_est[[x]] %>% summary(vcov = 'iid') %>% coeftable() %>% magrittr::extract(2,2),
+      se_cl = dup_est[[x]] %>% summary(cluster = 'id') %>% coeftable() %>% magrittr::extract(2,2)
+    )
+  }
+) %>% bind_rows()
+```
+
+---
+layout: false
+class: clear, middle
+
+The effect of duplicating a dataset on the .pink[OLS standard error]
+
+```{r, dup-plot1, echo = FALSE}
+ggplot(
+  data = dup_se,
+  aes(x = dups, y = se_iid)
+) +
+geom_hline(yintercept = 0) +
+geom_line(color = red_pink, size = 0.5) +
+geom_point(color = red_pink, size = 3.5) +
+labs(x = "Number of times dataset is duplicated", y = "Standard error") +
+theme_pander(base_size = 22, base_family = "Fira Sans Condensed")
+```
+
+---
+layout: false
+class: clear, middle
+
+Correcting our .orange[standard errors for clustering] (observations' correlation).
+
+```{r, dup-plot2, echo = FALSE}
+ggplot(
+  data = dup_se,
+  aes(x = dups)
+) +
+geom_hline(yintercept = 0) +
+geom_line(aes(y = se_iid), color = red_pink, size = 0.5, alpha = 0.25) +
+geom_point(aes(y = se_iid), color = red_pink, size = 3.5, alpha = 0.25) +
+geom_line(aes(y = se_cl), color = orange, size = 0.5) +
+geom_point(aes(y = se_cl), color = orange, size = 3.5) +
+labs(x = "Number of times dataset is duplicated", y = "Standard error") +
+theme_pander(base_size = 22, base_family = "Fira Sans Condensed")
+```
+
+---
+layout: true
+# Clustering
 
 ---
 name: moulton-example

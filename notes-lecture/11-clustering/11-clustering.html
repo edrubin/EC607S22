@@ -4,7 +4,6 @@
     <title>Inference: Clustering</title>
     <meta charset="utf-8" />
     <meta name="author" content="Edward Rubin" />
-    <script src="11-clustering_files/header-attrs-2.11/header-attrs.js"></script>
     <link href="11-clustering_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="11-clustering_files/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="11-clustering_files/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -270,6 +269,31 @@ The .attn[Moulton factor] tells us by what factor standard errors will be wrong 
  What if you duplicated your dataset?
 --
 &lt;br&gt;.qa[Q] What happens as `\(n\)` increases?
+
+---
+exclude: true
+
+
+
+---
+layout: false
+class: clear, middle
+
+The effect of duplicating a dataset on the .pink[OLS standard error]
+
+&lt;img src="11-clustering_files/figure-html/dup-plot1-1.svg" style="display: block; margin: auto;" /&gt;
+
+---
+layout: false
+class: clear, middle
+
+Correcting our .orange[standard errors for clustering] (observations' correlation).
+
+&lt;img src="11-clustering_files/figure-html/dup-plot2-1.svg" style="display: block; margin: auto;" /&gt;
+
+---
+layout: true
+# Clustering
 
 ---
 name: moulton-example
@@ -791,7 +815,6 @@ layout: false
 1. [Simulation](#simulation)
 1. [Resources](#resources)
 ]]
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
