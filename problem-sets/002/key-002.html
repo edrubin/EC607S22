@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.172">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Problem Set 2</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+
+  <script src="key-002_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="key-002_files/libs/quarto-html/quarto.js"></script>
+  <script src="key-002_files/libs/quarto-html/popper.min.js"></script>
+  <script src="key-002_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="key-002_files/libs/quarto-html/anchor.min.js"></script>
+  <link href="key-002_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="key-002_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="key-002_files/libs/bootstrap/bootstrap.min.js"></script>
+  <link href="key-002_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="key-002_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body class="fullcontent">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+<div class="quarto-title"><h1 class="title display-7">Problem Set 2</h1></div></header>
+<p><strong>01</strong> Loading packages…</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(fastverse, fixest, here)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">fastverse_extend</span>(<span class="at">topics =</span> <span class="st">'VI'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stderr">
+<pre><code>-- [1mAttaching extension packages[22m ----------------------------- [38;5;33mfastverse[39m 0.2.1 --</code></pre>
+</div>
+<div class="cell-output-stderr">
+<pre><code>[38;5;33mv[39m [38;5;198mggplot2[39m 3.3.5       [38;5;33mv[39m [38;5;198mlattice[39m 0.20.44
+[38;5;33mv[39m [38;5;198mscales [39m 1.1.1       [38;5;33mv[39m [38;5;198mgrid   [39m 4.1.1  </code></pre>
+</div>
+<div class="cell-output-stderr">
+<pre><code>-- [1mConflicts[22m ------------------------------------------ fastverse_conflicts() --
+[31mx[39m [34mscales[39m::[32mpvalue()[39m masks [34mfixest[39m::pvalue()</code></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ps_dt <span class="ot">=</span> <span class="fu">here</span>(<span class="st">'data-002.csv'</span>) <span class="sc">%&gt;%</span> <span class="fu">fread</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>02</strong> Time for some figures.</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Black income, 2010</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> income_white_2010 <span class="sc">-</span> income_black_2010, <span class="at">fill =</span> <span class="fu">as.factor</span>(had_rosenwald_school))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_histogram</span>(<span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">color =</span> <span class="cn">NA</span>, <span class="at">position =</span> <span class="st">'identity'</span>, <span class="at">bins =</span> <span class="dv">50</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_fill_viridis_d</span>(<span class="st">'Had Rosenwald School'</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'N'</span>, <span class="st">'Y'</span>)) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_continuous</span>(<span class="st">'Income Gap in 2010'</span>, <span class="at">labels =</span> dollar) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_y_continuous</span>(<span class="st">'Count'</span>, <span class="at">labels =</span> comma) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'bottom'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="key-002_files/figure-html/figures-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Black income, 2010</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> pct_pop_enslaved_1860<span class="sc">/</span><span class="dv">100</span>, <span class="at">fill =</span> <span class="fu">as.factor</span>(had_rosenwald_school))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_histogram</span>(<span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">color =</span> <span class="cn">NA</span>, <span class="at">position =</span> <span class="st">'identity'</span>, <span class="at">bins =</span> <span class="dv">50</span>) <span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_fill_viridis_d</span>(<span class="st">'Had Rosenwald School'</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'N'</span>, <span class="st">'Y'</span>)) <span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_continuous</span>(<span class="st">'Percent of Population Enslaved in 1860'</span>, <span class="at">labels =</span> percent) <span class="sc">+</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_y_continuous</span>(<span class="st">'Count'</span>, <span class="at">labels =</span> comma) <span class="sc">+</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'bottom'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="key-002_files/figure-html/figures-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Black income, 2010</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> pct_pop_enslaved_1860<span class="sc">/</span><span class="dv">100</span>, <span class="at">y =</span> income_white_2010 <span class="sc">-</span> income_black_2010, <span class="at">color =</span> <span class="fu">as.factor</span>(had_rosenwald_school))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_color_viridis_d</span>(<span class="st">'Had Rosenwald School'</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'N'</span>, <span class="st">'Y'</span>)) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_continuous</span>(<span class="st">'Percent of Population Enslaved in 1860'</span>, <span class="at">labels =</span> percent) <span class="sc">+</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_y_continuous</span>(<span class="st">'Income Gap in 2010'</span>, <span class="at">labels =</span> dollar) <span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'bottom'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="key-002_files/figure-html/figures-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>03</strong> Regressing the income gap on the indicator for Rosenwald school, we are assuming that schools’ locations are as good as random (in their distribution across counties). In other words, we need anything that affects the gap—other than the schools—to be independent of whether counties had Rosenwald schools.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cross-sectional regression</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>reg03 <span class="ot">=</span> <span class="fu">feols</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  income_white_2010 <span class="sc">-</span> income_black_2010 <span class="sc">~</span> </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  had_rosenwald_school,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">etable</span>(reg03)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>                                                   reg03
+Dependent Var.:      income_white_2010-income_black_2010
+                                                        
+(Intercept)                          14,537.5*** (802.8)
+had_rosenwald_school                  4,323.7*** (909.7)
+____________________      ______________________________
+S.E. type                                            IID
+Observations                                         710
+R2                                               0.03092
+Adj. R2                                          0.02955
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>04</strong> Estimates below. Our CIA updates to <em>within state</em> placement of schools needs to be as good as random (conditional on state, all non-Rosenwald school determinants of the income gap are independent of whether or not a county had a Rosenwald school).</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add state fixed effects</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>reg04 <span class="ot">=</span> <span class="fu">feols</span>(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  income_white_2010 <span class="sc">-</span> income_black_2010 <span class="sc">~</span> </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  had_rosenwald_school <span class="sc">|</span> </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  state,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">etable</span>(reg04)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>                                                   reg04
+Dependent Var.:      income_white_2010-income_black_2010
+                                                        
+had_rosenwald_school                 4,285.8** (1,087.0)
+Fixed-Effects:            ------------------------------
+state                                                Yes
+____________________      ______________________________
+S.E.: Clustered                                by: state
+Observations                                         710
+R2                                               0.09778
+Within R2                                        0.02938
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>05</strong> Estimates below…</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add 1860 controls</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>reg05 <span class="ot">=</span> <span class="fu">feols</span>(</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  income_white_2010 <span class="sc">-</span> income_black_2010 <span class="sc">~</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  had_rosenwald_school <span class="sc">+</span> pct_pop_enslaved_1860 <span class="sc">+</span> pop_total_1860 <span class="sc">|</span> </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  state,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">etable</span>(reg05)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>                                                    reg05
+Dependent Var.:       income_white_2010-income_black_2010
+                                                         
+had_rosenwald_school                    2,252.9** (669.1)
+pct_pop_enslaved_1860                    129.1*** (20.06)
+pop_total_1860                           0.1062* (0.0409)
+Fixed-Effects:             ------------------------------
+state                                                 Yes
+_____________________      ______________________________
+S.E.: Clustered                                 by: state
+Observations                                          710
+R2                                                0.16186
+Within R2                                         0.09831
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>06</strong> Comparison below. Yes, the movement in the point estimate for the effect of Rosenwald schools seems to match what we would expect. One would like expect that places with more histories of more intense slavery would have larger income gaps today and would also have been more likely to receive a Rosenwald school. When we control for the county’s history of slavery (and total population in 1860), we see the coefficient on the Rosenwald school indicator decrease.</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">etable</span>(reg04, reg05)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>                                                    reg04
+Dependent Var.:       income_white_2010-income_black_2010
+                                                         
+had_rosenwald_school                  4,285.8** (1,087.0)
+pct_pop_enslaved_1860                                    
+pop_total_1860                                           
+Fixed-Effects:             ------------------------------
+state                                                 Yes
+_____________________      ______________________________
+S.E.: Clustered                                 by: state
+Observations                                          710
+R2                                                0.09778
+Within R2                                         0.02938
+
+                                                    reg05
+Dependent Var.:       income_white_2010-income_black_2010
+                                                         
+had_rosenwald_school                    2,252.9** (669.1)
+pct_pop_enslaved_1860                    129.1*** (20.06)
+pop_total_1860                           0.1062* (0.0409)
+Fixed-Effects:             ------------------------------
+state                                                 Yes
+_____________________      ______________________________
+S.E.: Clustered                                 by: state
+Observations                                          710
+R2                                                0.16186
+Within R2                                         0.09831
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>07</strong> Open answer: Just want to see a DAG that makes the point that we have likely not controlled for everything.</p>
+<p><strong>08</strong> I’d be concerned that there could be a bad-controls issue here: if the schools affected current (or 2010) population levels, then we should not control for it. If we don’t think schools affected current population, then we are probably fine (depending on the DAG you have in mind).</p>
+<p><strong>09</strong> Estimate the propensity scores…</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate propensity scores as function of 1860 attributes</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>pscore_reg <span class="ot">=</span> <span class="fu">feglm</span>(</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  had_rosenwald_school <span class="sc">~</span> </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">#pct_pop_enslaved_1860 + pop_total_1860,</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">I</span>(pct_pop_enslaved_1860<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> <span class="fu">I</span>(pop_total_1860<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> pct_pop_enslaved_1860 <span class="sc">*</span> pop_total_1860,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">'logit'</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Add propensity scores to the dataset</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>ps_dt[, p_score <span class="sc">:</span><span class="er">=</span> <span class="fu">predict</span>(pscore_reg, <span class="at">newdata =</span> ps_dt)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>10</strong> Estimates below. The estimated effect of Rosenwald schools is smaller in magnitude and no longer significantly different from zero (still positive).</p>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate the 1860-controls regression, controlling for the propensity score</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>reg10 <span class="ot">=</span> <span class="fu">feols</span>(</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  income_white_2010 <span class="sc">-</span> income_black_2010 <span class="sc">~</span> </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  had_rosenwald_school <span class="sc">+</span> pct_pop_enslaved_1860 <span class="sc">+</span> pop_total_1860 <span class="sc">+</span> p_score <span class="sc">|</span> </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  state,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">etable</span>(<span class="st">"OLS"</span> <span class="ot">=</span> reg05, <span class="st">"Prop. Scores"</span> <span class="ot">=</span> reg10)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>                                                      OLS
+Dependent Var.:       income_white_2010-income_black_2010
+                                                         
+had_rosenwald_school                    2,252.9** (669.1)
+pct_pop_enslaved_1860                    129.1*** (20.06)
+pop_total_1860                           0.1062* (0.0409)
+p_score                                                  
+Fixed-Effects:             ------------------------------
+state                                                 Yes
+_____________________      ______________________________
+S.E.: Clustered                                 by: state
+Observations                                          710
+R2                                                0.16186
+Within R2                                         0.09831
+
+                                             Prop. Scores
+Dependent Var.:       income_white_2010-income_black_2010
+                                                         
+had_rosenwald_school                      1,626.8 (928.2)
+pct_pop_enslaved_1860                     95.69** (23.67)
+pop_total_1860                           0.0619. (0.0317)
+p_score                                 7,464.5 (4,561.5)
+Fixed-Effects:             ------------------------------
+state                                                 Yes
+_____________________      ______________________________
+S.E.: Clustered                                 by: state
+Observations                                          710
+R2                                                0.16806
+Within R2                                         0.10498
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>11</strong> Checking overlap… doesn’t look perfect (yet).</p>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check overlap</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> p_score, <span class="at">fill =</span> <span class="fu">as.factor</span>(had_rosenwald_school))</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_histogram</span>(<span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">color =</span> <span class="cn">NA</span>, <span class="at">position =</span> <span class="st">'identity'</span>, <span class="at">binwidth =</span> <span class="fl">0.01</span>) <span class="sc">+</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_fill_viridis_d</span>(<span class="st">'Had Rosenwald School'</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'N'</span>, <span class="st">'Y'</span>)) <span class="sc">+</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_continuous</span>(<span class="st">'Estimated Propensity Score'</span>, <span class="at">labels =</span> percent) <span class="sc">+</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_y_continuous</span>(<span class="st">'Count'</span>, <span class="at">labels =</span> comma) <span class="sc">+</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'bottom'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="key-002_files/figure-html/answer-11-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>12</strong> Finding the violators.</p>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enforce overlap</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>c_max <span class="ot">=</span> ps_dt[had_rosenwald_school <span class="sc">==</span> <span class="dv">0</span>, <span class="fu">max</span>(p_score)]</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>t_min <span class="ot">=</span> ps_dt[had_rosenwald_school <span class="sc">==</span> <span class="dv">1</span>, <span class="fu">min</span>(p_score)]</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>ps_dt[, overlap <span class="sc">:</span><span class="er">=</span> <span class="dv">1</span>]</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>ps_dt[had_rosenwald_school <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> p_score <span class="sc">&lt;</span> t_min, overlap <span class="sc">:</span><span class="er">=</span> <span class="dv">0</span>]</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>ps_dt[had_rosenwald_school <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> p_score <span class="sc">&gt;</span> c_max, overlap <span class="sc">:</span><span class="er">=</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Approximately 93.9% of the observations comply with our enforced overlap.</p>
+<p><strong>13</strong> We need to be able to compare individuals with equal likelihoods of treatment. Without overlap, there is no counterfactual for some observations—and we cannot enforce the CIA.</p>
+<p><strong>14</strong> Enforcing overlap here doesn’t actually change much…</p>
+<div class="cell">
+<div class="sourceCode" id="cb22"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeat regression but now enforcing overlap</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>reg14 <span class="ot">=</span> <span class="fu">feols</span>(</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  income_white_2010 <span class="sc">-</span> income_black_2010 <span class="sc">~</span> </span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  had_rosenwald_school <span class="sc">+</span> pct_pop_enslaved_1860 <span class="sc">+</span> pop_total_1860 <span class="sc">+</span> p_score <span class="sc">|</span> </span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  state,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt[overlap <span class="sc">==</span> <span class="cn">TRUE</span>]</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="fu">etable</span>(<span class="st">'No overlap'</span> <span class="ot">=</span> reg10, <span class="st">'Overlap'</span> <span class="ot">=</span> reg14)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>                                               No overlap
+Dependent Var.:       income_white_2010-income_black_2010
+                                                         
+had_rosenwald_school                      1,626.8 (928.2)
+pct_pop_enslaved_1860                     95.69** (23.67)
+pop_total_1860                           0.0619. (0.0317)
+p_score                                 7,464.5 (4,561.5)
+Fixed-Effects:             ------------------------------
+state                                                 Yes
+_____________________      ______________________________
+S.E.: Clustered                                 by: state
+Observations                                          710
+R2                                                0.16806
+Within R2                                         0.10498
+
+                                                  Overlap
+Dependent Var.:       income_white_2010-income_black_2010
+                                                         
+had_rosenwald_school                      1,622.6 (920.9)
+pct_pop_enslaved_1860                     95.13** (23.88)
+pop_total_1860                            0.0024 (0.1019)
+p_score                                 8,365.2 (5,651.1)
+Fixed-Effects:             ------------------------------
+state                                                 Yes
+_____________________      ______________________________
+S.E.: Clustered                                 by: state
+Observations                                          667
+R2                                                0.16321
+Within R2                                         0.09459
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>15</strong> The coefficient increases a bit when we inversely weight with the estimated propensity scores; it is marginally significant (at the 10% level).</p>
+<div class="cell">
+<div class="sourceCode" id="cb24"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add propensity score weights to the dataset</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>ps_dt[, p_weight <span class="sc">:</span><span class="er">=</span> (</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  had_rosenwald_school <span class="sc">/</span> p_score <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">-</span> had_rosenwald_school) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> p_score)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>)]</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Weighted regression (with controls; no propensity score)</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>reg15 <span class="ot">=</span> <span class="fu">feols</span>(</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  income_white_2010 <span class="sc">-</span> income_black_2010 <span class="sc">~</span> </span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  had_rosenwald_school <span class="sc">+</span> pct_pop_enslaved_1860 <span class="sc">+</span> pop_total_1860 <span class="sc">|</span> </span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  state,</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span> <span class="sc">~</span> p_weight,</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ps_dt[overlap <span class="sc">==</span> <span class="cn">TRUE</span>]</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="fu">etable</span>(reg15)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>                                                    reg15
+Dependent Var.:       income_white_2010-income_black_2010
+                                                         
+had_rosenwald_school                     1,966.4. (941.6)
+pct_pop_enslaved_1860                     147.5** (34.88)
+pop_total_1860                            0.1026 (0.1497)
+Fixed-Effects:             ------------------------------
+state                                                 Yes
+_____________________      ______________________________
+S.E.: Clustered                                 by: state
+Observations                                          667
+R2                                                0.17514
+Within R2                                         0.09152
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb26"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate block-level treatement effects</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>block_dt <span class="ot">=</span> <span class="fu">lapply</span>(</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">X =</span> <span class="fu">seq</span>(<span class="fl">0.4</span>, <span class="dv">1</span>, <span class="fl">0.1</span>),</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">FUN =</span> <span class="cf">function</span>(b) {</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The block's results</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    b_est <span class="ot">=</span> <span class="fu">feols</span>(</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>      income_white_2010 <span class="sc">-</span> income_black_2010 <span class="sc">~</span> </span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>      had_rosenwald_school <span class="sc">+</span> pct_pop_enslaved_1860 <span class="sc">+</span> pop_total_1860 <span class="sc">|</span> state,</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> ps_dt[overlap <span class="sc">==</span> <span class="cn">TRUE</span> <span class="sc">&amp;</span> p_score <span class="sc">&gt;</span> b <span class="sc">-</span> <span class="fl">0.1</span> <span class="sc">&amp;</span> p_score <span class="sc">&lt;=</span> b]</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return </span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.table</span>(</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">block =</span> b,</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">est =</span>  <span class="fu">as.matrix</span>(b_est<span class="sc">$</span>coeftable)[<span class="st">"had_rosenwald_school"</span>,<span class="st">"Estimate"</span>],</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">n =</span> b_est<span class="sc">$</span>nobs</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> <span class="fu">rbindlist</span>()</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Show block-level treatment effects</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>block_dt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>   block         est   n
+1:   0.4 -6248.40100  25
+2:   0.5  4740.73301  29
+3:   0.6   -40.67093  36
+4:   0.7 -5330.11593  66
+5:   0.8  4501.95411 114
+6:   0.9   179.68589 206
+7:   1.0  2780.19632 182</code></pre>
+</div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate the average treatment effect</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>block_dt[, <span class="fu">weighted.mean</span>(<span class="at">x =</span> est, <span class="at">w =</span> n)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>[1] 1039.899</code></pre>
+</div>
+</div>
+<p><strong>17</strong> The proposed instrument is likely invalid: While it is probably relevant (Rosenwald schools correlates with the county’s level of 1860 enslavement), it is likely not exogenous. There are likely other factors caused by (or related to) slavery that affect the income gap (other than Rosenwald school construction), which violates the exclusion restriction. Further, there may even be a concern about monotonicity if history of enslavement increased some counties’ likelihood of getting a school and decreased other counties.</p>
+
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+</body></html>

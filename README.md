@@ -299,6 +299,7 @@ Problem sets combining econometric theory and R.
 
 [**Problem set 2**](problem-sets/002)
 <br>**Due:** 18 May 2022 (submit on Canvas)
+<br>[Key](problem-sets/002/key-002.html)
 
 ## Project
 

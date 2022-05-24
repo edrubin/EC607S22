@@ -66,7 +66,7 @@ For this first regression, just regress the income gap on the indicator for whet
 
 **05** Now add two controls from 1860: the percent of the population that was enslaved in 1860 (`pct_pop_enslaved_1860`) and the total county population in 1860 (`pop_total_1860`). Report your results. (You should still have a state fixed effect.)
 
-**06** Does the change in the estimated coefficients on `had_rosenwald_school` from **04** and **06** suggest match what you would have guessed if these new variables (`pct_pop_enslaved_1860` and `pop_total_1860`) were causing bias? Explain.
+**06** Does the change in the estimated coefficients on `had_rosenwald_school` from **04** and **06** match what you would have guessed if these new variables (`pct_pop_enslaved_1860` and `pop_total_1860`) were causing bias? Explain.
 
 **07** What is the required conditional independence assumption required by **06**? Do you think it is valid? Explain your answer using a DAG (and discuss which variables should and should not be used as controls).
 
@@ -102,7 +102,7 @@ Finally, you can grab those beautiful (estimated) propensity scores from your sa
 
 Report each block's estimated treatment effect and the ATE.
 
-**Q** Maybe a selection on *unobservables* strategy would have been better. Explain your thoughts on the idea of using the county's history of Black enslavement (e.g., `pct_pop_enslaved_1860`) as an instrument for whether the county received a Rosenwald school.
+**17** Maybe a selection on *unobservables* strategy would have been better. Explain your thoughts on the idea of using the county's history of Black enslavement (e.g., `pct_pop_enslaved_1860`) as an instrument for whether the county received a Rosenwald school.
 
 
 
