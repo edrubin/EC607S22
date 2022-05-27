@@ -32,8 +32,6 @@ We're going to focus on how a tract's change in housing values between 1980 and 
 
 Briefly interpret your results.
 
----
-
 **05** Under what conditionsl will the coefficients on the NPL indicator (in **02**–**04**)  be unbiased for the effect of NPL listing on local property values?
 
 **06** Let's compare the covariates for the treated (NPL listed) and control (non-NPL listed) tracts. First use `allcovariates.dta` to compare the covariates (the controls you used above) between the tracts listed on the NPL and the tracts that were not listed on the NPL (before 2000). 
