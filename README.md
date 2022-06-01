@@ -209,7 +209,7 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 
 **Readings:** MHE chapter 6 + C&T sections 25.6
 
-[**Lecture 13: Machine learning (in one lecture)**](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/13-ml/13-ml.html)
+[**Lecture 13: Machine learning (in one lecture)**](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/13-ml/13-ml.html)
 
 1. Prediction basics
 1. The bias-variance tradeoff
@@ -219,10 +219,10 @@ The content of the lectures mainly follows *MHE* and [Michael Anderson](https://
 1. Decision trees
 1. Ensembles (of trees)
 
-<!-- **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/13-ml/13-ml.html) |
-[.pdf](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/13-ml/13-ml.pdf) | 
-[.Rmd](https://raw.githack.com/edrubin/EC607S21/master/notes-lecture/13-ml/13-ml.Rmd)
--->
+ **Note formats:** [.html](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/13-ml/13-ml.html) |
+[.pdf](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/13-ml/13-ml.pdf) | 
+[.Rmd](https://raw.githack.com/edrubin/EC607S22/master/notes-lecture/13-ml/13-ml.Rmd)
+
 **Readings:** [Introduction to statistical learning](http://faculty.marshall.usc.edu/gareth-james/ISL/)
 
 ## Lab slides
