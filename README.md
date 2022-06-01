@@ -367,3 +367,7 @@ That said, I *do* have to turn in grades (and there is a GPA requirement to sit 
 - [Website from 2019](https://github.com/edrubin/EC525S19)
 - [Section notes from a previous PhD-level class](https://edrub.in/ARE212).
 - [Lecture notes from a previous undergrad class](https://github.com/edrubin/EC421W20).
+
+**More**
+
+- David Card's Nobel [acceptance speech](https://www.youtube.com/watch?v=OCzVP5J0GYI), [the related paper](https://pubs.aeaweb.org/doi/pdfplus/10.1257/aer.112.6.1773), and some [slides](https://davidcard.berkeley.edu/lectures/woytinsky.pdf)
