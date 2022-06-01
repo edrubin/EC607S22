@@ -1,6 +1,6 @@
 # Problem set 003
 
-IV + RD, Robust
+IV + RD
 
 ## Goal
 
@@ -31,8 +31,6 @@ We're going to focus on how a tract's change in housing values between 1980 and 
 - Also add state fixed effects.
 
 Briefly interpret your results.
-
----
 
 **05** Under what conditionsl will the coefficients on the NPL indicator (in **02**–**04**)  be unbiased for the effect of NPL listing on local property values?
 
@@ -71,8 +69,6 @@ Make sure that your second-stage estimate is equal to the ratio of your reduced 
 **13** Repeat the 2SLS analysis from **11** but change your instrument to an indicator for whether HRS score is above 28.5 (no fixed effects). How do you results change? Briefly discuss.
 
 **14** Based upon your first stage estimates in **13**: If we want to estimate the effect using a regression discontinuity, will it be a *sharp or fuzzy RD*? Briefly explain your answer.
-
----
 
 **15** Create the standard plots of a regression discontinuity (remember to bin your observations using the running variable, HRS score):
 
