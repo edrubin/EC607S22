@@ -24,7 +24,7 @@ We're going to focus on how a tract's change in housing values between 1980 and 
 
 *Recall:* The `feols()` function from `fixest` allows you to cluster and is quite fast.
 
-**04** Now run the three regressions described below, sequentially adding more controls to the regressions you ran in **2** and **3**. We are still principally interested in the effect of listing on the NPL.
+**04** Now run the three regressions described below, sequentially adding more controls to the regressions you ran in **02** and **03**. We are still principally interested in the effect of listing on the NPL.
 
 - Control for 1980 housing values
 - Also control for economic and demographic variables. (Report which variables you included.)
@@ -40,7 +40,7 @@ Does it look like the covariates are *balanced* across NPL and non-NPL listed tr
 
 *Notes:* The `all` in the filename means that the file has *all* of the Census tracts. This comparison should be done via regression. You do not need to cluster your errors (though in real life you would want to).
 
-**07** Repeat the exercise from **6** with the dataset named `sitecovariates.dta`. This dataset focuses on tracts that received an HRS test in 1982. Separately compare the balance for treated and control units using the following three definitions of treated and control:
+**07** Repeat the exercise from **06** with the dataset named `sitecovariates.dta`. This dataset focuses on tracts that received an HRS test in 1982. Separately compare the balance for treated and control units using the following three definitions of treated and control:
 
 - NPL-listed prior to 2000 *vs.* not NPL-listed prior to 2000 (what we've been doing so far)
 - HRS score above 28.5 *vs.* HRS score below 28.5
