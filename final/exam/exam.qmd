@@ -1,0 +1,122 @@
+---
+title: "Final Exam"
+subtitle: "EC 607"
+author: "Edward Rubin"
+format:
+  html:
+    toc: true
+    number-sections: true
+    self-contained: true
+---
+
+## Instructions
+
+Make sure you **read each section's instructions.**
+
+**Do not discuss** the exams' questions or your answers with anyone except Kyu and Ed. Any deviation from this rule will result in a zero on the final.
+
+You may **use any written resources**---books, websites, or notes---that you wish, as long as they do not require you communicating with your classmates.
+
+Submit your answers on Canvas before 1:00pm (Pacific) on Friday, 10 June 2022. Your submission should include your written answer, figures, regression output, and code—in one or two files.
+
+*Note:* The exam is written to help you learn; don't cheat yourself out of this opportunity.
+
+## Conceptual: General questions
+
+*35 points*
+
+**Instructions:** Answer each question---justifying/explaining your answer.
+
+**[01]** For each of the following identification strategies, define the main assumption(s) that are required for unbiased (or consistent) estimates of a treatment effect:
+
+**[01a]** A selection-on-observables design
+<br>**[01b]** Instrumental variables
+<br>**[01c]** Sharp regression discontinuity
+
+**[02]** Many identification strategies try create a situation where the potential outcomes $\text{Y}_{0}$ and $\text{Y}_{1}$ are uncorrelated with treatment (possibly conditional on some controls). Do regression discontinuities rely upon the potential outcomes being uncorrelated with treatment? Explain your answer.
+
+**[03]** You are interesting in estimating the effect of some treatment $\text{D}$ on an outcome $\text{Y}$, but you are quite confident that $\text{D}$ is "selected" (*i.e.*, correlates with potential outcomes). You know of a variable $\text{W}$ that is very predictive of treatment status *and* uncorrelated with the potential outcomes. For some individuals, $\text{W}$ greatly increases their likelihood of treatment; for other individuals, $\text{W}$ reduces their likelihood of treatment. Explain whether $\text{W}$ is or is not be a good instrument---or if it depends.
+
+**[04]** When people talk about "clustering their errors", are they talking about correlated disturbances or correlated treatment assignment? Explain.
+
+**[05]** Linear regression is clearly restrictive---it's hard to expect the *real world* to follow 
+$$
+  \text{y} = \beta_0 + \beta_1 \text{x}_1 + \beta_2 \text{x}_2 + \cdots + \beta_k \text{x}_k + \varepsilon
+$$
+Explain why we (economists and related social scientists) still rely so much on linear, least squares regression.
+
+## Conceptual: Which effect?
+
+*35 points*
+
+**Instructions:** For each of the following questions, tell me **which type of treatment effect** you would be estimating (ATE, TOT, ITT, *etc.*) and **explain your answer in one short sentence**. A short sentence has fewer than 30 words.
+
+*Hint:* Don't assume treatment are homogeneous unless you are told they are.
+
+**[06]** You wish to estimate the effect of a college degree on earnings. First, you randomly distribute a set of scholarships to high-school seniors. Then, using the individuals' earnings—along with the outcome of the scholarship lottery—you estimate the returns to education by regressing earnings on an indicator for whether individuals received the random scholarships.
+
+**[07]** *Slight update to **[06]**:* You still want to estimate the effect of a college degree on earnings. You randomly distribute a set of scholarships to high-school seniors. Then, using the individuals' earnings (and your information on the scholarship lottery), you estimate the returns to education as the ratio $\text{A}$/$\text{B}$ where
+
+- $\text{A}=$ the scholarship's effect on earnings
+- $\text{B}=$ the scholarship's effect on the probability of receiving a college degree
+
+**[08]** *Continuing **[07]**:* For this question only: What if the scholarship increases graduation rates from lower-income students and decreases graduation rates for higher-income students?
+
+**[09]** *Continuing **[07]**:* What if the effect of college degrees is the same for all individuals?
+
+**[10]** To estimate the effect of access to banking on consumption, you match neighborhoods with banks to similar neighborhoods without banks. You then compare consumption in each neighborhood that has a bank to its closest-matched neighborhods that do not have banks (taking the difference). Finally, you take the average of each of these differences.
+
+**[11]** For each treated individual $i$, you calculate $\hat{\tau}_i = \text{Y}_{i} - \text{Y}_{j(i)}$, where individual $j(i)$ is a randomly selected person from the control group (sampled with replacement). You then estimate the causal effect of treatment as the mean of the $\hat{\tau}_i$'s.
+
+**[12]** You subtract the mean of the treatment group from the mean of the control group.
+
+## Practical: RD time
+
+*50 points*
+
+**Instructions:** This section requires the provided dataset `final-data.csv` and `R`. Variables' definitions: `y` = outcome, `d` = treatment, `x` = running variable, `w` = covariate.
+
+**[13]** Is the RD fuzzy or sharp? Illustrate the answer with a single, clear, well-labeled figure.
+
+*Hint:* The threshold is at 0.2.
+
+**[14]** Create a well-labeled scatter plot with the outcome on the y axis and the running variable on the x axis. Does there appear to be a treatment effect? Explain your answer.
+
+**[15]** Repeat **[14]** but now using bin-based summaries (rather than raw data). In other words: summarize the data for each bin, where the bin is defined via the running variable.
+
+**[16]** Estimate the treatment effect using an RD design. Each of the following parts gives a different RD specification for you to use in estimating the treatment effect. For each part, provide (**1**) the point estimate, (**2**) the standard error, and (**3**) a clean, well-labeled figure depicting the given estimate and specification.
+
+*Hint:* For the figure, you can use `ggplot2`'s function [geom_smooth()](https://ggplot2.tidyverse.org/reference/geom_smooth.html). Within [geom_smooth()])(https://ggplot2.tidyverse.org/reference/geom_smooth.html), you can specify a `method` (*e.g.*, `"method = lm"` or `"method = loess"` and a `formula`, *e.g.*,
+`"formula = y ~ x + I(x^2)"`. [geom\_smooth()](https://ggplot2.tidyverse.org/reference/geom_smooth.html)'s help page includes many examples.
+
+**[16a]** Apply a specification that uses constant slope on either side of the discontinuity. Use all of the observations.
+<br>**[16b]** Repeat, but only use observations within 10 units of the threshold.
+<br>**[16c]** With your tighter bandwidth: Estimate the treatment effect but allow the slope to vary on either side of the discontinuity.
+<br>**[16d]** Keeping your bandwidth tight: Estimate the treatment effect while using quadratic (second-order polynomial) functions on either side of the discontinuity.
+<br>**[16e]** Repeat the previous quadratic-based estimation on the full dataset.
+
+**[17]** Which of the previous methods worked 'best'? Explain. How much did your treatment-effect estimates vary?
+
+**[18]** Using a single, clear, well-labeled figure: Illustrate whether we should be concerned with sorting. Explain your answer.
+
+## Simulation: You saw this coming, right?
+
+*30 points*
+
+**Important:** You may choose to skip this last section of the test (questions **[19–20]**). However, if you skip this section, the highest grade you can earn in the **entire course** is a "B" (which excludes "B+"). Completing this section does not guarantee you recieve higher than a "B", but it does give you a chance.
+
+**Instructions:** This last section requires `R`.
+
+**[19]** Write a simple simulation that demonstrates the M bias. (*Hint:* DAG lecture) Your simulation should include at least 100 iterations (ideally it would be closer to 10,000, but you've got a short timeline).
+
+The simulation should compare the distribution of estimates from an estimator that suffers M bias with the distribution of estimates from an estimator that does not suffer from M bias (it's all about the controls).
+
+Explain your parameter choices.
+
+*Hint:* We have a bunch of lectures from the term that walk you through simulation. 
+
+- Define a DGP (after you define M bias).
+- Next: Define what needs to happen in each iteration of the simulation. 
+- Then run it a bunch of times.
+
+**[20]** Create a nice figure of the simulation's results.

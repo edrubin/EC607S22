@@ -331,7 +331,7 @@ Step 2: [**Project proposal**](project/step-02.md)
 
 ## Exams
 
-We will have one exam—the final—which will be due by **1PM Pacific on Friday, June 10th, 2021**.
+Your responses to the [take-home final](final) are due by **1PM Pacific on Friday, June 10th, 2021**.
 
 ## Grades
 
