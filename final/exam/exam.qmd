@@ -90,7 +90,7 @@ Explain why we (economists and related social scientists) still rely so much on 
 `"formula = y ~ x + I(x^2)"`. [geom\_smooth()](https://ggplot2.tidyverse.org/reference/geom_smooth.html)'s help page includes many examples.
 
 **[16a]** Apply a specification that uses constant slope on either side of the discontinuity. Use all of the observations.
-<br>**[16b]** Repeat, but only use observations within 10 units of the threshold.
+<br>**[16b]** Repeat, but only use observations within 1 unit of the threshold.
 <br>**[16c]** With your tighter bandwidth: Estimate the treatment effect but allow the slope to vary on either side of the discontinuity.
 <br>**[16d]** Keeping your bandwidth tight: Estimate the treatment effect while using quadratic (second-order polynomial) functions on either side of the discontinuity.
 <br>**[16e]** Repeat the previous quadratic-based estimation on the full dataset.
